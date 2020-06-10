@@ -1,5 +1,5 @@
 {
-  "name": "imm-gub-uy-wordcloud-panel",
+  "name": "wordcloud-panel",
   "version": "1.0.0",
   "description": "WordCloud / TagCloud Panel",
   "scripts": {
@@ -12,8 +12,8 @@
   "author": "rsperoni@magnesium.coop",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/grafana/simple-react-panel/issues",
-    "email": "plugins@grafana.com"
+    "url": "https://github.com/raulsperoni/grafana-wordcloud-panel-plugin/issues",
+    "email": "rsperoni@magnesium.coop"
   },
   "devDependencies": {
     "@grafana/data": "7.0.1",

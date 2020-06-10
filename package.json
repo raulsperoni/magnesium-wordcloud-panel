@@ -1,5 +1,5 @@
 {
-  "name": "wordcloud-panel",
+  "name": "magnesium-wordcloud-panel",
   "version": "1.0.0",
   "description": "WordCloud / TagCloud Panel",
   "scripts": {

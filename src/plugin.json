@@ -1,0 +1,40 @@
+{
+  "type": "panel",
+  "name": "wordcloud-panel",
+  "id": "imm-gub-uy-wordcloud-panel",
+  "info": {
+    "description": "WordCloud / TagCloud Panel",
+    "author": {
+      "name": "raúl",
+      "url": "imm.gub.uy"
+    },
+    "keywords": [
+      "wordcloud",
+      "tagcloud",
+      "word",
+      "tag",
+      "cloud"
+    ],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      {
+        "name": "Website",
+        "url": "https://github.com/grafana/simple-react-panel"
+      },
+      {
+        "name": "License",
+        "url": "https://github.com/grafana/simple-react-panel/blob/master/LICENSE"
+      }
+    ],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+  "dependencies": {
+    "grafanaVersion": "6.3.x",
+    "plugins": []
+  }
+}

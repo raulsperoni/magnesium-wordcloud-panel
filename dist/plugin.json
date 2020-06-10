@@ -1,0 +1,40 @@
+{
+  "type": "panel",
+  "name": "magnesium-wordcloud-panel",
+  "id": "magnesium-wordcloud-panel",
+  "info": {
+    "description": "WordCloud / TagCloud Panel",
+    "author": {
+      "name": "raúl",
+      "url": "magnesium"
+    },
+    "keywords": [
+      "wordcloud",
+      "tagcloud",
+      "word",
+      "tag",
+      "cloud"
+    ],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      {
+        "name": "Website",
+        "url": "https://github.com/raulsperoni/grafana-wordcloud-panel-plugin"
+      },
+      {
+        "name": "License",
+        "url": "https://github.com/grafana/simple-react-panel/blob/master/LICENSE"
+      }
+    ],
+    "screenshots": [],
+    "version": "1.0.0",
+    "updated": "2020-06-10"
+  },
+  "dependencies": {
+    "grafanaVersion": "7.0.x",
+    "plugins": []
+  }
+}

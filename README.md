@@ -1,10 +1,6 @@
 # WordCloud Panel Plugin
 
-This is a Wordcloud/Tagcloud panel for Grafana 7.0+
-
-
-## Lib
-This is using the amazing [react-wordcloud](https://react-wordcloud.netlify.com/)
+This is a Wordcloud/Tagcloud panel for Grafana 7.0+, using the amazing library [react-wordcloud](https://react-wordcloud.netlify.com/)
 
 ## Usage
 

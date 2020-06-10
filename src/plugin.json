@@ -1,12 +1,12 @@
 {
   "type": "panel",
-  "name": "wordcloud-panel",
-  "id": "imm-gub-uy-wordcloud-panel",
+  "name": "magnesium-wordcloud-panel",
+  "id": "magnesium-wordcloud-panel",
   "info": {
     "description": "WordCloud / TagCloud Panel",
     "author": {
       "name": "raúl",
-      "url": "imm.gub.uy"
+      "url": "magnesium"
     },
     "keywords": [
       "wordcloud",
@@ -22,7 +22,7 @@
     "links": [
       {
         "name": "Website",
-        "url": "https://github.com/grafana/simple-react-panel"
+        "url": "https://github.com/raulsperoni/grafana-wordcloud-panel-plugin"
       },
       {
         "name": "License",
@@ -34,7 +34,7 @@
     "updated": "%TODAY%"
   },
   "dependencies": {
-    "grafanaVersion": "6.3.x",
+    "grafanaVersion": "7.0.x",
     "plugins": []
   }
 }

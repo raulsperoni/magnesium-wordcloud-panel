@@ -8,7 +8,7 @@
     "dev": "grafana-toolkit plugin:dev",
     "watch": "grafana-toolkit plugin:dev --watch"
   },
-  "repository": "github:grafana/simple-react-panel",
+  "repository": "github:grafana/grafana-wordcloud-panel-plugin",
   "author": "rsperoni@magnesium.coop",
   "license": "Apache-2.0",
   "bugs": {

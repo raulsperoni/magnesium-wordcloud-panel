@@ -4,8 +4,6 @@ This is a Wordcloud/Tagcloud panel for Grafana 7.0+, using the amazing library [
 
 This was boostraped using the new @grafana/toolkit
 
-![Screenshot](https://raw.githubusercontent.com/raulsperoni/magnesium-wordcloud-panel/master/src/img/wordcloud-screenshot.png)
-
 ![Screenshot with query](https://raw.githubusercontent.com/raulsperoni/magnesium-wordcloud-panel/master/src/img/wordcloud-screenshot-query.png)
 
 

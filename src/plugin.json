@@ -1,6 +1,6 @@
 {
   "type": "panel",
-  "name": "magnesium-wordcloud-panel",
+  "name": "Word cloud",
   "id": "magnesium-wordcloud-panel",
   "info": {
     "description": "WordCloud / TagCloud Panel",

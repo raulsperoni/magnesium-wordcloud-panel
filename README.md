@@ -21,7 +21,7 @@ Every other settings for the wordcloud can be changed in the plugin options tab.
 
 ## ToDo
 
-It would be really nice to use the library's available callbacks to filter grafana dashboard data when a word is clicked. I haven't found a neat way to do this yet.
+It would be really nice to use the library's available callbacks to filter grafana dashboard data when a word is clicked. I haven't found a neat way to do this yet. [Issue #5](https://github.com/raulsperoni/magnesium-wordcloud-panel/issues/5)
 
 ## Getting started
 1. Install dependencies

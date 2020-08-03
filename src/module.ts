@@ -8,13 +8,11 @@ export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOption
       path: 'datasource_count_field',
       name: 'Count Field',
       description: 'Datasource Count Field',
-      defaultValue: 'Count',
     })
     .addTextInput({
       path: 'datasource_tags_field',
       name: 'Tags/Words Field',
       description: 'Datasource Tags/Words Field',
-      defaultValue: 'tweet_content.tags',
     })
     .addNumberInput({
       path: 'series_index',

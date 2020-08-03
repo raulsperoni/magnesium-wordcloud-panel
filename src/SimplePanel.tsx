@@ -1,8 +1,8 @@
 import React from 'react';
-import {FieldType, PanelProps} from '@grafana/data';
-import {SimpleOptions} from 'types';
-import {css, cx} from 'emotion';
-import {stylesFactory} from '@grafana/ui';
+import { FieldType, PanelProps } from '@grafana/data';
+import { SimpleOptions } from 'types';
+import { css, cx } from 'emotion';
+import { stylesFactory } from '@grafana/ui';
 import ReactWordcloud from 'react-wordcloud';
 
 interface Props extends PanelProps<SimpleOptions> {}
@@ -14,11 +14,11 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
   const words: Array<{ text: string; value: number }> = [];
   let tags: string[] = [];
   let count: number[] = [];
-  const tagsField = data.series[options.series_index].fields.find(
-    field => options.datasource_tags_field ? field.name === options.datasource_tags_field : field.type === FieldType.string
+  const tagsField = data.series[options.series_index].fields.find(field =>
+    options.datasource_tags_field ? field.name === options.datasource_tags_field : field.type === FieldType.string
   );
-  const countField = data.series[options.series_index].fields.find(
-    field => options.datasource_count_field ? field.name === options.datasource_count_field : field.type === FieldType.number
+  const countField = data.series[options.series_index].fields.find(field =>
+    options.datasource_count_field ? field.name === options.datasource_count_field : field.type === FieldType.number
   );
   if (tagsField && countField) {
     tags = tagsField.values.toArray();

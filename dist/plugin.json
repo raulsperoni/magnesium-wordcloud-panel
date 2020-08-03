@@ -1,6 +1,6 @@
 {
   "type": "panel",
-  "name": "magnesium-wordcloud-panel",
+  "name": "Word cloud",
   "id": "magnesium-wordcloud-panel",
   "info": {
     "description": "WordCloud / TagCloud Panel",
@@ -31,7 +31,7 @@
     ],
     "screenshots": [],
     "version": "1.0.0",
-    "updated": "2020-06-10"
+    "updated": "2020-08-03"
   },
   "dependencies": {
     "grafanaVersion": "7.0.x",

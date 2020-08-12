@@ -5,8 +5,9 @@
   "info": {
     "description": "WordCloud / TagCloud Panel",
     "author": {
-      "name": "raúl",
-      "url": "magnesium"
+      "email": "rsperoni@magnesium.coop",
+      "name": "Raúl Speroni",
+      "url": "https://magnesium.coop"
     },
     "keywords": [
       "wordcloud",
@@ -29,12 +30,21 @@
         "url": "https://github.com/grafana/simple-react-panel/blob/master/LICENSE"
       }
     ],
-    "screenshots": [],
+    "screenshots": [
+      {
+        "name": "panel",
+        "path": "img/wordcloud-screenshot.png"
+      },
+      {
+        "name": "query",
+        "path": "img/wordcloud-screenshot-query.png"
+      }
+    ],
     "version": "%VERSION%",
     "updated": "%TODAY%"
   },
   "dependencies": {
-    "grafanaVersion": "7.0.x",
+    "grafanaDependency": ">=7.0.0",
     "plugins": []
   }
 }

@@ -14,6 +14,11 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
   const words: Array<{ text: string; value: number }> = [];
   let tags: string[] = [];
   let count: number[] = [];
+  let stopWords: string[] = [];
+
+  if (options.stop_words !== undefined) {
+    stopWords = options.stop_words.split(',');
+  }
   const tagsField = data.series[options.series_index].fields.find(field =>
     options.datasource_tags_field ? field.name === options.datasource_tags_field : field.type === FieldType.string
   );
@@ -25,7 +30,9 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
     count = countField.values.toArray();
   }
   tags.forEach((value, index) => {
-    words.push({ text: value, value: count[index] });
+    if (stopWords.indexOf(value) === -1) {
+      words.push({ text: value, value: count[index] });
+    }
   });
 
   return (

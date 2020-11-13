@@ -25886,21 +25886,29 @@ var SimplePanel = function SimplePanel(_a) {
   var tags = [];
   var count = [];
   var stopWords = [];
-
-  if (options.stop_words !== undefined) {
-    stopWords = options.stop_words.split(',');
-  }
-
   var tagsField = data.series[options.series_index].fields.find(function (field) {
     return options.datasource_tags_field ? field.name === options.datasource_tags_field : field.type === _grafana_data__WEBPACK_IMPORTED_MODULE_2__["FieldType"].string;
   });
   var countField = data.series[options.series_index].fields.find(function (field) {
     return options.datasource_count_field ? field.name === options.datasource_count_field : field.type === _grafana_data__WEBPACK_IMPORTED_MODULE_2__["FieldType"].number;
   });
+  var stopWordsField = data.series[options.series_index].fields.find(function (field) {
+    return options.datasource_stop_words ? field.name === options.datasource_stop_words : field.type === _grafana_data__WEBPACK_IMPORTED_MODULE_2__["FieldType"].string;
+  });
 
   if (tagsField && countField) {
     tags = tagsField.values.toArray();
     count = countField.values.toArray();
+  }
+
+  if (stopWordsField && options.datasource_stop_words !== undefined) {
+    stopWords = stopWordsField.values.toArray();
+  }
+
+  if (options.stop_words !== undefined) {
+    options.stop_words.split(',').forEach(function (element) {
+      stopWords.push(element);
+    });
   }
 
   tags.forEach(function (value, index) {
@@ -25959,9 +25967,13 @@ var plugin = new _grafana_data__WEBPACK_IMPORTED_MODULE_0__["PanelPlugin"](_Simp
     name: 'Tags/Words Field',
     description: 'Datasource Tags/Words Field'
   }).addTextInput({
+    path: 'datasource_stop_words',
+    name: 'StopWords Field',
+    description: 'Datasource Stopword Field'
+  }).addTextInput({
     path: 'stop_words',
     name: 'StopWords',
-    description: 'comma seperated list of words to not be displayed in cloud'
+    description: 'Comma seperated list of words (i.e.: hello,world)'
   }).addNumberInput({
     path: 'series_index',
     name: 'Series index',

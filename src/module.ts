@@ -14,6 +14,16 @@ export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOption
       name: 'Tags/Words Field',
       description: 'Datasource Tags/Words Field',
     })
+    .addTextInput({
+      path: 'datasource_stop_words',
+      name: 'StopWords Field',
+      description: 'Datasource Stopword Field',
+    })
+    .addTextInput({
+      path: 'stop_words',
+      name: 'StopWords',
+      description: 'Comma seperated list of words (i.e.: hello,world)',
+    })
     .addNumberInput({
       path: 'series_index',
       name: 'Series index',

@@ -21,4 +21,6 @@ export interface SimpleOptions {
   datasource_tags_field: string;
   datasource_count_field: string;
   series_index: number;
+  stop_words: string | undefined;
+  datasource_stop_words: string;
 }

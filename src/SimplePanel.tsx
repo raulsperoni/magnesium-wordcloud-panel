@@ -16,13 +16,13 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
   let count: number[] = [];
   let stopWords: string[] = [];
 
-  const tagsField = data.series[options.series_index].fields.find(field =>
+  const tagsField = data.series[options.series_index].fields.find((field) =>
     options.datasource_tags_field ? field.name === options.datasource_tags_field : field.type === FieldType.string
   );
-  const countField = data.series[options.series_index].fields.find(field =>
+  const countField = data.series[options.series_index].fields.find((field) =>
     options.datasource_count_field ? field.name === options.datasource_count_field : field.type === FieldType.number
   );
-  const stopWordsField = data.series[options.series_index].fields.find(field =>
+  const stopWordsField = data.series[options.series_index].fields.find((field) =>
     options.datasource_stop_words ? field.name === options.datasource_stop_words : field.type === FieldType.string
   );
   if (tagsField && countField) {
@@ -33,7 +33,7 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
     stopWords = stopWordsField.values.toArray();
   }
   if (options.stop_words !== undefined) {
-    options.stop_words.split(',').forEach(element => {
+    options.stop_words.split(',').forEach((element) => {
       stopWords.push(element);
     });
   }

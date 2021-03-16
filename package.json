@@ -1,6 +1,6 @@
 {
   "name": "magnesium-wordcloud-panel",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "WordCloud / TagCloud Panel",
   "scripts": {
     "build": "grafana-toolkit plugin:build",

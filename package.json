@@ -23,7 +23,7 @@
     "emotion": "10.0.27"
   },
   "engines": {
-    "node": ">=12 <13"
+    "node": ">=12 <15"
   },
   "dependencies": {
     "react-wordcloud": "^1.2.3"

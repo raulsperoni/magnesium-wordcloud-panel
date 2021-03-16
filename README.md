@@ -1,4 +1,5 @@
 [![CI](https://github.com/raulsperoni/magnesium-wordcloud-panel/actions/workflows/ci.yml/badge.svg)](https://github.com/raulsperoni/magnesium-wordcloud-panel/actions/workflows/ci.yml)
+[![Release](https://github.com/raulsperoni/magnesium-wordcloud-panel/actions/workflows/release.yml/badge.svg)](https://github.com/raulsperoni/magnesium-wordcloud-panel/actions/workflows/release.yml)
 
 # ☁️ WordCloud Panel Plugin
 

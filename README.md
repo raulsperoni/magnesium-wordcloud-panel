@@ -1,7 +1,7 @@
 [![CI](https://github.com/raulsperoni/magnesium-wordcloud-panel/actions/workflows/ci.yml/badge.svg)](https://github.com/raulsperoni/magnesium-wordcloud-panel/actions/workflows/ci.yml)
 [![Release](https://github.com/raulsperoni/magnesium-wordcloud-panel/actions/workflows/release.yml/badge.svg)](https://github.com/raulsperoni/magnesium-wordcloud-panel/actions/workflows/release.yml)
-[![Marketplace](https://img.shields.io/badge/dynamic/json?logo=grafana&color=F47A20&label=marketplace&prefix=v&query=%24.items%5B%3F%28%40.slug%20%3D%3D%20%22<YOUR_PLUGIN_ID>%22%29%5D.version&url=https%3A%2F%2Fgrafana.com%2Fapi%2Fplugins)](https://grafana.com/grafana/plugins/magnesium-wordcloud-panel)
-[![Downloads](https://img.shields.io/badge/dynamic/json?logo=grafana&color=F47A20&label=downloads&query=%24.items%5B%3F%28%40.slug%20%3D%3D%20%22<YOUR_PLUGIN_ID>%22%29%5D.downloads&url=https%3A%2F%2Fgrafana.com%2Fapi%2Fplugins)](https://grafana.com/grafana/plugins/magnesium-wordcloud-panel)
+[![Marketplace](https://img.shields.io/badge/dynamic/json?logo=grafana&color=F47A20&label=marketplace&prefix=v&query=%24.items%5B%3F%28%40.slug%20%3D%3D%20%22magnesium-wordcloud-panel%22%29%5D.version&url=https%3A%2F%2Fgrafana.com%2Fapi%2Fplugins)](https://grafana.com/grafana/plugins/magnesium-wordcloud-panel)
+[![Downloads](https://img.shields.io/badge/dynamic/json?logo=grafana&color=F47A20&label=downloads&query=%24.items%5B%3F%28%40.slug%20%3D%3D%20%22magnesium-wordcloud-panel%22%29%5D.downloads&url=https%3A%2F%2Fgrafana.com%2Fapi%2Fplugins)](https://grafana.com/grafana/plugins/magnesium-wordcloud-panel)
 
 
 # ☁️ WordCloud Panel Plugin

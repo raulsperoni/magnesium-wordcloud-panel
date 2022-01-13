@@ -10,6 +10,11 @@ export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOption
       description: 'Datasource Count Field',
     })
     .addTextInput({
+      path: 'datasource_color_field',
+      name: 'Color Field',
+      description: 'Datasource Color Field',
+    })
+    .addTextInput({
       path: 'datasource_tags_field',
       name: 'Tags/Words Field',
       description: 'Datasource Tags/Words Field',

@@ -23,4 +23,5 @@ export interface SimpleOptions {
   series_index: number;
   stop_words: string | undefined;
   datasource_stop_words: string;
+  datasource_color_field: string;
 }

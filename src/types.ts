@@ -18,6 +18,7 @@ export interface WordCloudOptions {
 
 export interface SimpleOptions {
   wordCloudOptions: WordCloudOptions;
+  tokenization: boolean;
   datasource_tags_field: string;
   datasource_count_field: string;
   series_index: number;

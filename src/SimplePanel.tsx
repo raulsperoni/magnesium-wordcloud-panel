@@ -4,6 +4,7 @@ import { SimpleOptions } from 'types';
 import { css, cx } from 'emotion';
 import { stylesFactory } from '@grafana/ui';
 import ReactWordcloud from 'react-wordcloud';
+import { countBy, keys, values, repeat } from 'lodash';
 
 interface Props extends PanelProps<SimpleOptions> {}
 
@@ -19,6 +20,7 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
   const tagsField = data.series[options.series_index].fields.find(field =>
     options.datasource_tags_field ? field.name === options.datasource_tags_field : field.type === FieldType.string
   );
+
   const countField = data.series[options.series_index].fields.find(field =>
     options.datasource_count_field ? field.name === options.datasource_count_field : field.type === FieldType.number
   );
@@ -29,6 +31,13 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
     tags = tagsField.values.toArray();
     count = countField.values.toArray();
   }
+
+  if (options.tokenization) {
+    const [words, counts] = tokenization(tags, count);
+    tags = words;
+    count = counts;
+  }
+
   if (stopWordsField && options.datasource_stop_words !== undefined) {
     stopWords = stopWordsField.values.toArray();
   }
@@ -78,3 +87,19 @@ const getStyles = stylesFactory(() => {
     `,
   };
 });
+
+const tokenization = (words: string[], counts: number[]): [string[], number[]] => {
+  let content = '';
+  const space = ' ';
+  words.forEach((w, i) => {
+    const count = counts[i];
+    content += repeat(w + space, count);
+  });
+
+  const matched = content.match(/\w+/g) || [];
+
+  const tokens = matched.map(token => token.toLowerCase());
+  const tokensCountBy = countBy(tokens);
+
+  return [keys(tokensCountBy), values(tokensCountBy)];
+};

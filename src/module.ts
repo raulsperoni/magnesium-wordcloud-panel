@@ -4,6 +4,11 @@ import { SimplePanel } from './SimplePanel';
 
 export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOptions(builder => {
   return builder
+    .addBooleanSwitch({
+      path: 'tokenization',
+      name: 'Tokenization',
+      description: 'Count the words for you',
+    })
     .addTextInput({
       path: 'datasource_count_field',
       name: 'Count Field',

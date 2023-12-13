@@ -6,6 +6,13 @@
 
 # ☁️ WordCloud Panel Plugin
 
+## ⚠️ Unmaintained and looking for a new owner ⚠️
+I no longer have the time to maintain this plugin and would love for someone to take it over and continue development.
+
+If you are interested, please comment in this [issue] 🙏
+
+---
+
 This is a Wordcloud/Tagcloud panel for Grafana 7.0+, using the amazing library [react-wordcloud](https://github.com/chrisrzhou/react-wordcloud)
 
 This was boostraped using the new @grafana/toolkit

@@ -9,7 +9,7 @@
 ## ⚠️ Unmaintained and looking for a new owner ⚠️
 I no longer have the time to maintain this plugin and would love for someone to take it over and continue development.
 
-If you are interested, please comment in this [issue] 🙏
+If you are interested, please comment in this [issue](https://github.com/raulsperoni/magnesium-wordcloud-panel/issues/24) 🙏
 
 ---
 

@@ -1,6 +1,6 @@
 {
   "name": "magnesium-wordcloud-panel",
-  "version": "1.2.4",
+  "version": "1.2.9",
   "description": "WordCloud / TagCloud Panel",
   "scripts": {
     "build": "webpack -c ./.config/webpack/webpack.config.ts --env production",
@@ -16,11 +16,11 @@
     "typecheck": "tsc --noEmit"
   },
   "repository": "github:grafana/grafana-wordcloud-panel-plugin",
-  "author": "rsperoni@magnesium.coop",
+  "author": "raulsperoni@gmail.com",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/raulsperoni/grafana-wordcloud-panel-plugin/issues",
-    "email": "rsperoni@magnesium.coop"
+    "email": "raulsperoni@gmail.com"
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",

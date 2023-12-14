@@ -1,5 +1,3 @@
-[![CI](https://github.com/raulsperoni/magnesium-wordcloud-panel/actions/workflows/ci.yml/badge.svg)](https://github.com/raulsperoni/magnesium-wordcloud-panel/actions/workflows/ci.yml)
-[![Release](https://github.com/raulsperoni/magnesium-wordcloud-panel/actions/workflows/release.yml/badge.svg)](https://github.com/raulsperoni/magnesium-wordcloud-panel/actions/workflows/release.yml)
 [![Marketplace](https://img.shields.io/badge/dynamic/json?logo=grafana&color=F47A20&label=marketplace&prefix=v&query=%24.items%5B%3F%28%40.slug%20%3D%3D%20%22magnesium-wordcloud-panel%22%29%5D.version&url=https%3A%2F%2Fgrafana.com%2Fapi%2Fplugins)](https://grafana.com/grafana/plugins/magnesium-wordcloud-panel)
 [![Downloads](https://img.shields.io/badge/dynamic/json?logo=grafana&color=F47A20&label=downloads&query=%24.items%5B%3F%28%40.slug%20%3D%3D%20%22magnesium-wordcloud-panel%22%29%5D.downloads&url=https%3A%2F%2Fgrafana.com%2Fapi%2Fplugins)](https://grafana.com/grafana/plugins/magnesium-wordcloud-panel)
 
@@ -35,7 +33,3 @@ Every other settings for the wordcloud can be changed in the plugin options tab.
 ## ToDo
 
 It would be really nice to use the library's available callbacks to filter grafana dashboard data when a word is clicked. I haven't found a neat way to do this yet. [Issue #5](https://github.com/raulsperoni/magnesium-wordcloud-panel/issues/5)
-
-## Release to Grafana plugins repo
-
-Push tag v($version_number) and github actions will do it!

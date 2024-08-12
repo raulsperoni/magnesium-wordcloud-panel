@@ -24,4 +24,7 @@ export interface SimpleOptions {
   series_index: number;
   stop_words: string | undefined;
   datasource_stop_words: string;
+  clickable: boolean;
+  groupByTerm: string;
+  filterVariableName: string;
 }

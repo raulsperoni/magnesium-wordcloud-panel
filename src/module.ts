@@ -27,7 +27,7 @@ export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOption
     .addTextInput({
       path: 'stop_words',
       name: 'StopWords',
-      description: 'Comma seperated list of words (i.e.: hello,world)',
+      description: 'Comma separated list of words (i.e.: hello,world)',
     })
     .addNumberInput({
       path: 'series_index',
@@ -130,5 +130,23 @@ export const plugin = new PanelPlugin<SimpleOptions>(SimplePanel).setPanelOption
           },
         ],
       },
+    })
+    .addBooleanSwitch({
+      path: 'clickable',
+      name: 'Enable Clickable Words',
+      description: 'Enable words to be clickable for filtering',
+      defaultValue: false,
+    })
+    .addTextInput({
+      path: 'groupByTerm',
+      name: 'Group By Term',
+      description: 'Term to group by',
+      showIf: config => config.clickable,
+    })
+    .addTextInput({
+      path: 'filterVariableName',
+      name: 'Filter Variable Name',
+      description: 'Name of the ad hoc filter variable',
+      showIf: config => config.clickable,
     });
 });

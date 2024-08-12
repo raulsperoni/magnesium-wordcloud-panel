@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FieldType, PanelProps } from '@grafana/data';
 import { SimpleOptions } from 'types';
 import { css, cx } from 'emotion';
@@ -9,7 +9,6 @@ import { countBy, keys, values, repeat } from 'lodash';
 interface Props extends PanelProps<SimpleOptions> {}
 
 export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) => {
-  //const theme = useTheme();
   const styles = getStyles();
 
   const words: Array<{ text: string; value: number }> = [];
@@ -27,6 +26,7 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
   const stopWordsField = data.series[options.series_index].fields.find(field =>
     options.datasource_stop_words ? field.name === options.datasource_stop_words : field.type === FieldType.string
   );
+
   if (tagsField && countField) {
     tags = tagsField.values.toArray();
     count = countField.values.toArray();
@@ -52,6 +52,24 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
     }
   });
 
+  const handleClick = (word: any) => {
+    const url = new URL(window.location.href);
+    const newFilter = `${options.groupByTerm}|=|${word.text}`;
+    url.searchParams.append(`var-${options.filterVariableName}`, newFilter);
+    window.location.href = url.toString();
+  };
+
+  useEffect(() => {
+    const handleUrlChange = () => {
+      window.location.reload();
+    };
+
+    window.addEventListener('popstate', handleUrlChange);
+    return () => {
+      window.removeEventListener('popstate', handleUrlChange);
+    };
+  }, []);
+
   return (
     <div
       className={cx(
@@ -63,7 +81,17 @@ export const SimplePanel: React.FC<Props> = ({ options, data, width, height }) =
       )}
     >
       <div style={{ height: height, width: width }}>
-        <ReactWordcloud words={words} options={options.wordCloudOptions} />
+        <ReactWordcloud
+          words={words}
+          options={options.wordCloudOptions}
+          callbacks={
+            options.clickable
+              ? {
+                  onWordClick: handleClick,
+                }
+              : {}
+          }
+        />
       </div>
     </div>
   );
